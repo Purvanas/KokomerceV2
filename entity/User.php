@@ -9,61 +9,74 @@ class User {
     private $email;
     private $password;
     private $dateNaissance;
-    public function getId()() {
-        // Method implementation
+
+    // Getter pour l'ID
+    public function getId() {
+        return $this->id;
     }
-}
-    public function setId(Integer() {
-        // Method implementation
+
+    // Setter pour l'ID
+    public function setId($id) {
+        $this->id = $id;
     }
-}
-    public function getType()() {
-        // Method implementation
+
+    // Getter pour le type
+    public function getType() {
+        return $this->type;
     }
-}
-    public function setType(String() {
-        // Method implementation
+
+    // Setter pour le type
+    public function setType($type) {
+        $this->type = $type;
     }
-}
-    public function getNom()() {
-        // Method implementation
+
+    // Getter pour le nom
+    public function getNom() {
+        return $this->nom;
     }
-}
-    public function setNom(String() {
-        // Method implementation
+
+    // Setter pour le nom
+    public function setNom($nom) {
+        $this->nom = $nom;
     }
-}
-    public function getPrenom()() {
-        // Method implementation
+
+    // Getter pour le prénom
+    public function getPrenom() {
+        return $this->prenom;
     }
-}
-    public function setPrenom(String() {
-        // Method implementation
+
+    // Setter pour le prénom
+    public function setPrenom($prenom) {
+        $this->prenom = $prenom;
     }
-}
-    public function getEmail()() {
-        // Method implementation
+
+    // Getter pour l'email
+    public function getEmail() {
+        return $this->email;
     }
-}
-    public function setEmail(String() {
-        // Method implementation
+
+    // Setter pour l'email
+    public function setEmail($email) {
+        $this->email = $email;
     }
-}
-    public function getPassword()() {
-        // Method implementation
+
+    // Getter pour le mot de passe
+    public function getPassword() {
+        return $this->password;
     }
-}
-    public function setPassword(String() {
-        // Method implementation
+
+    // Setter pour le mot de passe
+    public function setPassword($password) {
+        $this->password = $password;
     }
-}
-    public function getDateNaissance()() {
-        // Method implementation
+
+    // Getter pour la date de naissance
+    public function getDateNaissance() {
+        return $this->dateNaissance;
     }
-}
-    public function setDateNaissance(String() {
-        // Method implementation
+
+    // Setter pour la date de naissance
+    public function setDateNaissance($dateNaissance) {
+        $this->dateNaissance = $dateNaissance;
     }
-}
-}
 }

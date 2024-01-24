@@ -9,9 +9,9 @@ class Article {
     private $remise;
     private $stock;
     private $isVendable;
-    private $commentaire; // Assuming Commentaire is another class, you should include it
 
-    public function __construct($id, $nom, $description, $prix, $remise, $stock, $isVendable, $commentaire) {
+
+    public function __construct($id, $nom, $description, $prix, $remise, $stock, $isVendable) {
         $this->id = $id;
         $this->nom = $nom;
         $this->description = $description;
@@ -19,10 +19,63 @@ class Article {
         $this->remise = $remise;
         $this->stock = $stock;
         $this->isVendable = $isVendable;
-        $this->commentaire = $commentaire;
     }
 
-    // Getters and setters for each property
-    // ...
+    // Getters and setters
+    public function getId() {
+        return $this->id;
+    }
+
+    public function setId($id) {
+        $this->id = $id;
+    }
+
+    public function getNom() {
+        return $this->nom;
+    }
+
+    public function setNom($nom) {
+        $this->nom = $nom;
+    }
+
+    public function getDescription() {
+        return $this->description;
+    }
+
+    public function setDescription($description) {
+        $this->description = $description;
+    }
+
+    public function getPrix() {
+        return $this->prix;
+    }
+
+    public function setPrix($prix) {
+        $this->prix = $prix;
+    }
+
+    public function getRemise() {
+        return $this->remise;
+    }
+
+    public function setRemise($remise) {
+        $this->remise = $remise;
+    }
+
+    public function getStock() {
+        return $this->stock;
+    }
+
+    public function setStock($stock) {
+        $this->stock = $stock;
+    }
+
+    public function getIsVendable() {
+        return $this->isVendable;
+    }
+
+    public function setIsVendable($isVendable) {
+        $this->isVendable = $isVendable;
+    }
 }
 ?>

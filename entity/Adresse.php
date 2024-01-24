@@ -2,31 +2,49 @@
 namespace Fr\Ensitech\Tpjsf\Entity;
 
 class Adresse {
-    private $id;
     private $numero;
     private $ville;
-    private $codePostale;
+    private $codePostale; // 'codePostale' devrait être 'codePostal'
     private $adresse;
     private $userId;
-    private $utilisateur; // Assuming User is another class, you should include it
 
-    public function __construct($numero, $ville, $codePostale, $utilisateur) {
+    public function __construct($numero, $ville, $codePostal, $utilisateur) {
         $this->numero = $numero;
         $this->ville = $ville;
-        $this->codePostale = $codePostale;
-        $this->utilisateur = $utilisateur;
+        $this->codePostale = $codePostal; // 'codePostale' devrait être 'codePostal'
     }
 
-    // Getters and setters
-    public function getId() {
-        return $this->id;
+    public function getNumero() {
+        return $this->numero;
     }
 
-    public function setId($id) {
-        $this->id = $id;
+    public function setNumero($numero) {
+        $this->numero = $numero;
     }
 
-    // ... similar getters and setters for other properties
+    public function getVille() {
+        return $this->ville;
+    }
+
+    public function setVille($ville) {
+        $this->ville = $ville;
+    }
+
+    public function getCodePostal() { // 'codePostale' devrait être 'codePostal'
+        return $this->codePostale;
+    }
+
+    public function setCodePostal($codePostal) { // 'codePostale' devrait être 'codePostal'
+        $this->codePostale = $codePostal;
+    }
+
+    public function getAdresse() {
+        return $this->adresse;
+    }
+
+    public function setAdresse($adresse) {
+        $this->adresse = $adresse;
+    }
 
     public function getUserId() {
         return $this->userId;

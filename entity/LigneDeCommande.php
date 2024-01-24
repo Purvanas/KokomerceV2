@@ -6,56 +6,66 @@ class LigneDeCommande {
     private $quantite;
     private $prixUnitaire;
     private $remiseArticle;
-    private $commande;
-    private $article;
-}
-}
-    public function getId()() {
-        // Method implementation
+    private $commande; // Assuming Commande is another class, you should include or use it
+    private $article; // Assuming Article is another class, you should include or use it
+
+    // Getter for id
+    public function getId() {
+        return $this->id;
     }
-}
-    public function setId(int() {
-        // Method implementation
+
+    // Setter for id
+    public function setId($id) {
+        $this->id = $id;
     }
-}
-    public function getQuantite()() {
-        // Method implementation
+
+    // Getter for quantite
+    public function getQuantite() {
+        return $this->quantite;
     }
-}
-    public function setQuantite(int() {
-        // Method implementation
+
+    // Setter for quantite
+    public function setQuantite($quantite) {
+        $this->quantite = $quantite;
     }
-}
-    public function getPrixUnitaire()() {
-        // Method implementation
+
+    // Getter for prixUnitaire
+    public function getPrixUnitaire() {
+        return $this->prixUnitaire;
     }
-}
-    public function setPrixUnitaire(float() {
-        // Method implementation
+
+    // Setter for prixUnitaire
+    public function setPrixUnitaire($prixUnitaire) {
+        $this->prixUnitaire = $prixUnitaire;
     }
-}
-    public function getRemiseArticle()() {
-        // Method implementation
+
+    // Getter for remiseArticle
+    public function getRemiseArticle() {
+        return $this->remiseArticle;
     }
-}
-    public function setRemiseArticle(int() {
-        // Method implementation
+
+    // Setter for remiseArticle
+    public function setRemiseArticle($remiseArticle) {
+        $this->remiseArticle = $remiseArticle;
     }
-}
-    public function getCommande()() {
-        // Method implementation
+
+    // Getter for commande
+    public function getCommande() {
+        return $this->commande;
     }
-}
-    public function setCommande(Commande() {
-        // Method implementation
+
+    // Setter for commande
+    public function setCommande($commande) {
+        $this->commande = $commande; // Assurez-vous que $commande est une instance de la classe Commande
     }
-}
-    public function getArticle()() {
-        // Method implementation
+
+    // Getter for article
+    public function getArticle() {
+        return $this->article;
     }
-}
-    public function setArticle(Article() {
-        // Method implementation
+
+    // Setter for article
+    public function setArticle($article) {
+        $this->article = $article; // Assurez-vous que $article est une instance de la classe Article
     }
-}
 }

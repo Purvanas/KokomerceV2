@@ -9,105 +9,107 @@ class Commande {
     private $totaleRemise;
     private $fraisExpedition;
     private $totalGeneral;
-    private $adresseFacturation;
-    private $adresseLivraison;
-    private $cartePaiementDefaut;
-    private $utilisateur;
-    private $lignesCommande;
-}
-}
-    public function getId()() {
-        // Method implementation
+    private $adresseFacturation; // Assumer que c'est une instance de la classe Adresse
+    private $adresseLivraison;   // Assumer que c'est une instance de la classe Adresse
+    private $cartePaiementDefaut;// Assumer que c'est une instance de la classe CartePaiement
+    private $utilisateur;        // Assumer que c'est une instance de la classe User
+    private $lignesCommande;     // Assumer que c'est un tableau de lignes de commande
+
+    // Getters and setters
+    public function getId() {
+        return $this->id;
+    }
+
+    public function setId(int $id) {
+        $this->id = $id;
+    }
+
+    public function getNumero() {
+        return $this->numero;
+    }
+
+    public function setNumero(string $numero) {
+        $this->numero = $numero;
+    }
+
+    public function getDateCreation() {
+        return $this->dateCreation;
+    }
+
+    public function setDateCreation($dateCreation) { // Le type dépend de la façon dont la date est gérée
+        $this->dateCreation = $dateCreation;
+    }
+
+    public function getDateLivraison() {
+        return $this->dateLivraison;
+    }
+
+    public function setDateLivraison($dateLivraison) { // Le type dépend de la façon dont la date est gérée
+        $this->dateLivraison = $dateLivraison;
+    }
+
+    public function getTotaleRemise() {
+        return $this->totaleRemise;
+    }
+
+    public function setTotaleRemise(float $totaleRemise) {
+        $this->totaleRemise = $totaleRemise;
+    }
+
+    public function getFraisExpedition() {
+        return $this->fraisExpedition;
+    }
+
+    public function setFraisExpedition(float $fraisExpedition) {
+        $this->fraisExpedition = $fraisExpedition;
+    }
+
+    public function getTotalGeneral() {
+        return $this->totalGeneral;
+    }
+
+    public function setTotalGeneral(float $totalGeneral) {
+        $this->totalGeneral = $totalGeneral;
+    }
+
+    public function getAdresseFacturation() {
+        return $this->adresseFacturation;
+    }
+
+    public function setAdresseFacturation(Adresse $adresseFacturation) {
+        $this->adresseFacturation = $adresseFacturation;
+    }
+
+    public function getAdresseLivraison() {
+        return $this->adresseLivraison;
+    }
+
+    public function setAdresseLivraison(Adresse $adresseLivraison) {
+        $this->adresseLivraison = $adresseLivraison;
+    }
+
+    public function getCartePaiementDefaut() {
+        return $this->cartePaiementDefaut;
+    }
+
+    public function setCartePaiementDefaut(CartePaiement $cartePaiementDefaut) {
+        $this->cartePaiementDefaut = $cartePaiementDefaut;
+    }
+
+    public function getUtilisateur() {
+        return $this->utilisateur;
+    }
+
+    public function setUtilisateur(User $utilisateur) {
+        $this->utilisateur = $utilisateur;
+    }
+
+    public function getLignesCommande() {
+        return $this->lignesCommande;
+    }
+
+    public function setLignesCommande($lignesCommande) { // Le type dépend de la structure des lignes de commande
+        $this->lignesCommande = $lignesCommande;
     }
 }
-    public function setId(int() {
-        // Method implementation
-    }
-}
-    public function getNumero()() {
-        // Method implementation
-    }
-}
-    public function setNumero(String() {
-        // Method implementation
-    }
-}
-    public function getDateCreation()() {
-        // Method implementation
-    }
-}
-    public function setDateCreation(String() {
-        // Method implementation
-    }
-}
-    public function getDateLivraison()() {
-        // Method implementation
-    }
-}
-    public function setDateLivraison(String() {
-        // Method implementation
-    }
-}
-    public function getTotaleRemise()() {
-        // Method implementation
-    }
-}
-    public function setTotaleRemise(float() {
-        // Method implementation
-    }
-}
-    public function getFraisExpedition()() {
-        // Method implementation
-    }
-}
-    public function setFraisExpedition(float() {
-        // Method implementation
-    }
-}
-    public function getTotalGeneral()() {
-        // Method implementation
-    }
-}
-    public function setTotalGeneral(float() {
-        // Method implementation
-    }
-}
-    public function getAdresseFacturation()() {
-        // Method implementation
-    }
-}
-    public function setAdresseFacturation(Adresse() {
-        // Method implementation
-    }
-}
-    public function getAdresseLivraison()() {
-        // Method implementation
-    }
-}
-    public function setAdresseLivraison(Adresse() {
-        // Method implementation
-    }
-}
-    public function getCartePaiementDefaut()() {
-        // Method implementation
-    }
-}
-    public function setCartePaiementDefaut(CartePaiement() {
-        // Method implementation
-    }
-}
-    public function getUtilisateur()() {
-        // Method implementation
-    }
-}
-    public function setUtilisateur(User() {
-        // Method implementation
-    }
-}
-    public function getLignesCommande()() {
-        // Method implementation
-    }
-}
-}
-}
-}
+?>
