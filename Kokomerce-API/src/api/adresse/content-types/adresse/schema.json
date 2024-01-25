@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "adresses",
+  "info": {
+    "singularName": "adresse",
+    "pluralName": "adresses",
+    "displayName": "Adresse",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ville": {
+      "type": "string",
+      "maxLength": 40,
+      "required": true
+    },
+    "codePostale": {
+      "type": "string",
+      "maxLength": 10,
+      "required": true
+    },
+    "adresse": {
+      "type": "string",
+      "maxLength": 40,
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "adresses"
+    }
+  }
+}

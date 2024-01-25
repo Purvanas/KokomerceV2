@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commandes",
+  "info": {
+    "singularName": "commande",
+    "pluralName": "commandes",
+    "displayName": "Commande",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero": {
+      "type": "string",
+      "required": true,
+      "maxLength": 20
+    },
+    "dateCreation": {
+      "type": "date",
+      "required": true
+    },
+    "DateLivraison": {
+      "type": "date",
+      "required": true
+    },
+    "totaleRemise": {
+      "type": "decimal",
+      "max": 100,
+      "min": 0,
+      "required": true,
+      "default": 0
+    },
+    "fraisExpedition": {
+      "type": "decimal",
+      "min": 0,
+      "default": 0,
+      "required": true
+    },
+    "totalGeneral": {
+      "type": "decimal",
+      "required": true,
+      "default": 0,
+      "min": 0
+    },
+    "adresseFacturation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::adresse.adresse"
+    },
+    "adresseLivraison": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::adresse.adresse"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "commandes"
+    },
+    "carte_paiement": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::carte-paiement.carte-paiement"
+    },
+    "ligne_commandes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ligne-commande.ligne-commande",
+      "mappedBy": "commande"
+    }
+  }
+}

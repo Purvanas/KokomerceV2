@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paniers",
+  "info": {
+    "singularName": "panier",
+    "pluralName": "paniers",
+    "displayName": "Panier"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ligne_commandes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ligne-commande.ligne-commande",
+      "mappedBy": "panier"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "panier"
+    }
+  }
+}
