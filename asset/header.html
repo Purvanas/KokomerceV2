@@ -17,7 +17,7 @@
  </video>
     <nav class="navbar navbar-expand-lg navbar-dark bg-green-custom">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#top"><img id="logo" src="https://cdn.discordapp.com/attachments/1200029057505570887/1200029089008980039/d40df977-cf31-496d-b3fb-25e4232947b5.png?ex=65c4b12e&is=65b23c2e&hm=c50d123cfac80aade152d97353ba40db6163ddd069e74abbb9fab5e4b8c1193f&"></a>
+          <a class="navbar-brand" href="../index.php"><img id="logo" src="https://cdn.discordapp.com/attachments/1200029057505570887/1200029089008980039/d40df977-cf31-496d-b3fb-25e4232947b5.png?ex=65c4b12e&is=65b23c2e&hm=c50d123cfac80aade152d97353ba40db6163ddd069e74abbb9fab5e4b8c1193f&"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" onclick="showNav()">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -25,40 +25,40 @@
             <ul class="navbar-nav me-auto">
               
               <li class="nav-item">
-                <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link" href="catégorie">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#chantiers">Chantiers</a>
+                <a class="nav-link" id="btn-cnx" href="template/Connexion.php">Connexion</a>
               </li>
+
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#mentions">Mentions</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="template/Connexion.php">Connexion</a>
+                <a class="nav-link" id="btn-dcnx" onclick="logout()" href="../index.php">Déconnexion</a>
               </li>
               
-            </ul><!--
-            <div class="d-flex">
-              <input class="form-control me-sm-2" type="text" placeholder="Search">
-              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            <div>-->
+            </ul>
           </div>
         </div>
       </nav>
-      <div id="boutonDeNav">
-        <div id="nav-link-button-div">
-        <a class="nav-link-button" id="link1" href="#services">Services</a><br>
-        <a class="nav-link-button" id="link2" href="#chantiers">Chantier</a><br>
-        <a class="nav-link-button" id="link3" href="#contact">Contact</a><br>   
-        <a class="nav-link-button" id="link4" href="#mentions">Mentions</a><br>   
-        <a class="nav-link-button" id="link5" href="../template/Connexion.html">Connexion</a><br>     
-             
-      </div>
+
       </div>
 
+
+      <script>
+      if (localStorage.getItem("userData") !== null){
+        document.getElementById("btn-cnx").style.visibility = "hidden"
+        document.getElementById("btn-dcnx").style.visibility = "visible"
+      }
+      else{
+        document.getElementById("btn-cnx").style.visibility = "visible"
+        document.getElementById("btn-dcnx").style.visibility = "hidden"
+      }
+
+
+      function logout() {
+        localStorage.removeItem("userData")
+      }
+
+      </script>
     
 </body>
 </html>
